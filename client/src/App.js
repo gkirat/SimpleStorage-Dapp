@@ -33,16 +33,17 @@ function App() {
   const getAccounts = async () => {
     const { web3 } = state;
     const accounts = await web3.eth.getAccounts();
-    console.log(accounts);
+    console.log(accounts); 
     setAcc(accounts)
   };
+  
 
   const writeSM = async () => {
     const value = document.querySelector("#data").value;
     const { contract } = state;
     const write = await contract.methods
       .setter(value)
-      .send({ from: "0x761100886267Ab5F7D42E310aDC83562ab0172B6" });
+      .send({ from: "0x7b24c30D5BB4BaeA11F96775fB21E39D76e895fc" });
 
     console.log(write);
   };
